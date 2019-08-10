@@ -1,0 +1,275 @@
+@import colours
+
+html
+  box-sizing: border-box
+
+*
+	margin: 0
+	padding: 0
+
+*, *:before, *:after 
+  box-sizing: inherit
+
+body
+	background-color: #1C1C1C
+	background-image: url(../img/bg.png)
+	background-position: 55% top
+	background-repeat: no-repeat
+	font-family: Roboto Mono, monospace
+
+.container
+	width: 85%
+	margin-left: auto
+	margin-right: auto
+	
+.header
+	&-top
+		display: flex
+		justify-content: space-between
+		&_logo
+			&__link
+				display: inline-block
+				margin-top: 36px
+				text-decoration: none
+				&__kovera
+					font-size: 19px
+					position: relative
+					padding-left: 14px
+					bottom: 16px
+					color: $specific
+		&_nav
+			position: relative
+			&__btn
+				display: none
+				border: none
+				background: transparent
+				color: $specific
+				font-size: 25px
+				position: absolute
+				top: 39px
+				right: 0
+				outline: none
+			&__mob
+				display: none
+				list-style: none
+				text-align: right
+				position: absolute
+				top: 75px
+				right: 30px
+				width: 163px
+				background-color: $specific
+				padding: 10px
+				border-radius: 10% 0 10% 10%
+				&__item
+					text-decoration: none
+					color: white
+					font-size: 19px
+
+	&-mid
+		display: flex
+		justify-content: center
+		padding-top: 220px
+		&_wrapper
+			display: flex
+			flex-direction: column
+			text-align: center
+		&_h1
+			font-size: 36px
+			color: white
+			font-weight: 500
+		&_p
+			padding-top: 13px
+			font-size: 17px
+			color: $standart
+		&_link
+			margin-top: 54px
+			&__a
+				font-size: 15px
+				text-decoration: none
+				color: $specific
+				&:before
+					content: ''
+					display: inline-block
+					width: 9px
+					height: 8px
+					position: relative
+					top: -15px
+					left: -5px
+					border-left: 1px solid $specific
+					border-top: 1px solid $specific
+				&:after
+					content: ''
+					display: inline-block
+					width: 9px
+					height: 8px
+					position: relative
+					top: 12px
+					left: 5px
+					border-right: 1px solid $specific
+					border-bottom: 1px solid $specific
+	&-bottom
+		display: flex
+		justify-content: space-between
+		margin-top: 130px
+		color: $standart
+		&_social
+			&__link
+				color: $standart
+
+.nav
+	display: flex
+	margin: 0
+	padding: 0
+	list-style: none
+	font-size: 14px
+	margin-top: 47px
+	&-items
+		position: relative
+		color: $standart
+		text-decoration: none
+		margin-left: 40px
+		&:before
+			content: ''
+			display: none
+			width: 9px
+			height: 8px
+			position: absolute
+			left: -20%
+			top: -30%
+			border-left: 1px solid $specific
+			border-top: 1px solid $specific
+		&:after
+			content: ''
+			display: none
+			width: 9px
+			height: 8px
+			position: relative
+			left: 110%
+			border-right: 1px solid $specific
+			border-bottom: 1px solid $specific
+	&-items:first-child
+		&:before
+			left: -40%
+	&-items:nth-child(3)
+		&:before
+			left: -17%
+	&-items:hover
+		color: $specific
+		&:before
+			display: block
+		&:after
+			display: block
+
+.bottom //header-bottom
+	&-email
+		font-size: 14px
+
+.goals
+	background-image: url(../img/goals/goals_bg.png)
+	background-repeat: no-repeat
+	background-position: 50% -10%
+	margin-top: 200px
+	padding-bottom: 200px
+	&-h1
+		color: white
+		font-weight: 500
+		margin-bottom: 50px
+	&-items
+		display: flex
+		justify-content: space-between
+	&-item
+		width: 320px
+		&_h5
+			font-size: 17px
+			font-weight: 500
+			color: white
+			margin: 27px 0
+		&_p
+			font-size: 13px
+			color: $standart
+			line-height: 25px
+
+.offers
+	margin-bottom: 200px
+	&-title
+		display: flex
+		color: white
+		margin-bottom: 52px
+		&_h1
+			width: 140px
+			font-weight: 500
+		&_p
+			width: 280px
+			padding-left: 20px
+			padding-top: 18px
+	&-items
+		display: flex
+		justify-content: space-between
+	&-item
+		text-align: center
+		&_p
+			color: white
+			font-size: 14px
+			margin-top: 35px
+			position: relative
+			&:before
+				content: ''
+				display: block
+				width: 1px
+				height: 50px
+				background-color: $specific
+				position: absolute
+				bottom: 35px
+				left: 105px
+
+.footer
+	&-main
+		background-image: url(../img/footer_bg.png)
+		background-size: cover
+		padding-top: 140px
+		padding-left: 205px
+		padding-bottom: 140px
+		&_h1
+			font-weight: 500
+			width: 456px
+		&_subscribe
+			margin-top: 30px
+			&__btn
+				padding: 16px 30px
+				border: none
+				background-color: #9d8163
+				margin-left: -10px
+				color: white
+				cursor: pointer
+	&-bottom
+		display: flex
+		justify-content: space-between
+		color: $standart
+		padding: 15px 0
+	&-nav
+		display: flex
+		margin: 0
+		padding: 0
+		list-style: none
+		font-size: 14px
+		&_items
+			text-decoration: none
+			color: $standart
+		&_items:not(:first-child)
+			margin-left: 40px
+input[type=text]
+	background-color: #c4c4c4
+	color: black
+	font-family: Roboto Mono, monospace
+	padding: 16px
+	padding-left: 22px
+	padding-right: 427px
+	font-size: 12px
+	border: none
+	outline: none
+	&:focus
+		&::-webkit-input-placeholder
+			color: transparent
+
+.active
+	display: block
